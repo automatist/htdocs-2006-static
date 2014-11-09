@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteRule .* fr/ [L]
+
+RewriteCond %{THE_REQUEST} \ /(.+)\.php
+RewriteRule ^ /%1.html [L,R=301]
